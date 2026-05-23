@@ -16,7 +16,24 @@ import pandas as pd
 # URL base de la API de Fórmula 1 (Ergast)
 BASE_URL = "https://api.jolpi.ca/ergast/f1"
 SEASON = 2026 # Temporada que se va a consultar
+# Funcion->Data Escuderias
+def get_constructors():
+    url = f"{BASE_URL}/{SEASON}/constructors.json"
+    response = requests.get(url, timeout=10)
+    data = response.json()
+    return data
 
+def parse_constructors(data):
+    constructors = data["MRData"]["ConstructorTable"]["Constructors"]
+    result = []
+    for constructor in constructors:
+        result.append({
+            "constructorId": constructor["constructorId"],
+            "name": constructor["name"],
+            "nationality": constructor.get("nationality", "N/A")
+        })
+    return result
+# Funcion->Data pilotos
 def get_drivers():
     url = f"{BASE_URL}/{SEASON}/drivers.json"
     response = requests.get(url, timeout=10)
@@ -66,45 +83,115 @@ def parse_schedule(data):
     return result
 # Punto de entrada principal del programa
 if __name__ == "__main__":
-    # Obtiene los datos crudos desde la API
-    #data = get_schedule()
-    data = get_drivers()
-    pilots = parse_drivers(data)
-    df = pd.DataFrame(pilots)
-    # Procesa y organiza la informacion
-    #schedule = parse_schedule(data)
+    import pandas as pd
 
-    # Convierte la lista en un DataFrame de pandas
-    #df = pd.DataFrame(schedule)
-    #df.to_csv("data/schedule_2026.csv", index=False)
-    #print("Guardado!")
-    # Refleja el dataframe completo
-    print(df)
+def main():
 
-    #Filtra el dataframe por carreras por país
-    #print(df["country"].value_counts())
+    # =========================
+    # PILOTOS
+    # =========================
+    
+    # Obtiene datos de pilotos desde la API
+    drivers_data = get_drivers()
 
-    #filtra el dataframe info de un solo país (USA)
-    #print(df[df["country"] == "USA"])
+    # Procesa los datos
+    drivers = parse_drivers(drivers_data)
 
-    #filtra trae la info segun el round seleccionado
-    #print(df[df["round"] == "1"])
+    # Convierte a DataFrame
+    drivers_df = pd.DataFrame(drivers)
 
-    # Recorre e imprime cada carrera individualmente
+    # Muestra resultados
+    print("\n===== PILOTOS =====")
+    print(drivers_df)
+
+
+    # =========================
+    # CALENDARIO F1 2026
+    # =========================
+
+    # Obtiene calendario desde la API
+    schedule_data = get_schedule()
+
+    # Procesa los datos
+    schedule = parse_schedule(schedule_data)
+
+    # Convierte a DataFrame
+    schedule_df = pd.DataFrame(schedule)
+
+    # Muestra resultados
+    print("\n===== CALENDARIO 2026 =====")
+    print(schedule_df)
+
+    # Guarda en CSV (opcional)
+    # schedule_df.to_csv("data/schedule_2026.csv", index=False)
+    # print("Archivo guardado correctamente")
+
+
+    # =========================
+    # CONSTRUCTORES
+    # =========================
+
+    # Obtiene datos de constructores
+    constructors_data = get_constructors()
+
+    # Procesa los datos
+    constructors = parse_constructors(constructors_data)
+
+    # Convierte a DataFrame
+    constructors_df = pd.DataFrame(constructors)
+
+    # Muestra resultados
+    print("\n===== CONSTRUCTORES =====")
+    print(constructors_df)
+
+
+    # =========================
+    # FILTROS Y ANALISIS
+    # =========================
+
+    # Carreras por país
+    # print(schedule_df["country"].value_counts())
+
+    # Información de carreras en USA
+    # print(schedule_df[schedule_df["country"] == "USA"])
+
+    # Información según ronda
+    # print(schedule_df[schedule_df["round"] == "1"])
+
+
+    # =========================
+    # RECORRER CARRERAS
+    # =========================
+
     """
     for race in schedule:
-        print(race["round"], race["name"], race["date"], race["country"])
+        print(
+            race["round"],
+            race["name"],
+            race["date"],
+            race["country"]
+        )
     """
 
-    # Otra forma de acceder a los datos originales de la API
-    """
-    races = data["MRData"]["RaceTable"]["Races"]
 
-    # Imprime el total de carreras de la temporada
+    # =========================
+    # DATOS ORIGINALES DE LA API
+    # =========================
+
+    """
+    races = schedule_data["MRData"]["RaceTable"]["Races"]
+
     print(f"Total de carreras: {len(races)}")
-    #print(data)
-    
-    # Recorre e imprime ronda, nombre y fecha
+
     for race in races:
-        print(race["round"], race["raceName"], race["date"])
+        print(
+            race["round"],
+            race["raceName"],
+            race["date"]
+        )
     """
+
+
+# Ejecuta el programa
+if __name__ == "__main__":
+    main()
