@@ -33,7 +33,7 @@ def parse_constructors(data):
             "nationality": constructor.get("nationality", "N/A")
         })
     return result
-# Funcion->Data pilotos
+# Data pilotos
 def get_drivers():
     url = f"{BASE_URL}/{SEASON}/drivers.json"
     response = requests.get(url, timeout=10)
@@ -82,9 +82,6 @@ def parse_schedule(data):
     # Retorna la lista procesada
     return result
 # Punto de entrada principal del programa
-if __name__ == "__main__":
-    import pandas as pd
-
 def main():
 
     # =========================
