@@ -15,12 +15,27 @@ import pandas as pd
 
 # URL base de la API de Fórmula 1 (Ergast)
 BASE_URL = "https://api.jolpi.ca/ergast/f1"
-# URL de la API para pilotos 2026
-DRIVERS_URL = "https://api.jolpi.ca/ergast/f1"
 SEASON = 2026 # Temporada que se va a consultar
 
 def get_drivers():
-    url = f"{DRIVERS_URL}/{SEASON}/drivers.json"
+    url = f"{BASE_URL}/{SEASON}/drivers.json"
+    response = requests.get(url, timeout=10)
+    data = response.json()
+    return data
+
+def parse_drivers(data):
+    drivers = data ["MRData"]["DriverTable"]["Drivers"]
+    result = []
+    for driver in drivers:
+        result.append({
+            "permanentNumber": driver.get("permanentNumber", "N/A"),
+            "code": driver.get ("code", "N/A"),
+            "givenName": driver ["givenName"],
+            "familyName": driver ["familyName"],
+            "dateOfBirth": driver.get("dateOfBirth", "N/A"),
+            "nationality": driver.get("nationality", "N/A")
+        })
+    return result
 
 # Funcion para obtener los datos del calendario desde la API
 def get_schedule():
@@ -52,17 +67,19 @@ def parse_schedule(data):
 # Punto de entrada principal del programa
 if __name__ == "__main__":
     # Obtiene los datos crudos desde la API
-    data = get_schedule()
-
+    #data = get_schedule()
+    data = get_drivers()
+    pilots = parse_drivers(data)
+    df = pd.DataFrame(pilots)
     # Procesa y organiza la informacion
-    schedule = parse_schedule(data)
+    #schedule = parse_schedule(data)
 
     # Convierte la lista en un DataFrame de pandas
-    df = pd.DataFrame(schedule)
-    df.to_csv("data/schedule_2026.csv", index=False)
-    print("Guardado!")
+    #df = pd.DataFrame(schedule)
+    #df.to_csv("data/schedule_2026.csv", index=False)
+    #print("Guardado!")
     # Refleja el dataframe completo
-    #print(df)
+    print(df)
 
     #Filtra el dataframe por carreras por país
     #print(df["country"].value_counts())
