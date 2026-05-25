@@ -16,6 +16,7 @@ def parse_schedule(data):
             "round": race["round"],
             "name": race["raceName"],
             "date": race["date"],
-            "country": race["Circuit"]["Location"]["country"]
+            "country": race["Circuit"]["Location"]["country"],
+            "sprint": race.get("Sprint", {}).get("date", "N/A")
         })
     return result

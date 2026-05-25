@@ -2,7 +2,8 @@ from drivers import get_drivers, parse_drivers
 from schedule import get_schedule, parse_schedule
 from constructors import get_constructors, parse_constructors
 from results import get_race_results, parse_race_results
-from all_results import get_all_results, parse_all_results
+from all_results_races import get_all_results, parse_all_results
+from all_results_sprints import get_results_sprints, parse_results_sprints
 
 import pandas as pd
 
@@ -48,8 +49,16 @@ def main():
     print(all_results_df)
 
     # Guarda en CSV (TODOS LOS RESULTADOS)
-    all_results_df.to_csv("data/all_results_2026.csv", index=False)
-    print("Archivo guardado correctamente")
+    #all_results_df.to_csv("data/all_results_2026.csv", index=False)
+    #print("Archivo guardado correctamente")
+
+    # RESULRADOS SPRINTS
+    sprints_data = get_results_sprints()
+    sprints_results = parse_results_sprints(sprints_data)
+    sprints_results_df = pd.DataFrame(sprints_results)
+    print("\n===== RESULTADOS SPRINTS =====")
+    print(sprints_results_df)
+
 
 # Ejecuta el programa
 if __name__ == "__main__":
