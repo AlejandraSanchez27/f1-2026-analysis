@@ -1,0 +1,101 @@
+round,race_name,date,position,grid,points,status,driver_code,constructor
+1,Australian Grand Prix,2026-03-08,1,1,25,Finished,RUS,Mercedes
+1,Australian Grand Prix,2026-03-08,2,2,18,Finished,ANT,Mercedes
+1,Australian Grand Prix,2026-03-08,3,4,15,Finished,LEC,Ferrari
+1,Australian Grand Prix,2026-03-08,4,7,12,Finished,HAM,Ferrari
+1,Australian Grand Prix,2026-03-08,5,6,10,Finished,NOR,McLaren
+1,Australian Grand Prix,2026-03-08,6,20,8,Finished,VER,Red Bull
+1,Australian Grand Prix,2026-03-08,7,12,6,Lapped,BEA,Haas F1 Team
+1,Australian Grand Prix,2026-03-08,8,9,4,Lapped,LIN,RB F1 Team
+1,Australian Grand Prix,2026-03-08,9,10,2,Lapped,BOR,Audi
+1,Australian Grand Prix,2026-03-08,10,14,1,Lapped,GAS,Alpine F1 Team
+1,Australian Grand Prix,2026-03-08,11,13,0,Lapped,OCO,Haas F1 Team
+1,Australian Grand Prix,2026-03-08,12,15,0,Lapped,ALB,Williams
+1,Australian Grand Prix,2026-03-08,13,8,0,Lapped,LAW,RB F1 Team
+1,Australian Grand Prix,2026-03-08,14,16,0,Lapped,COL,Alpine F1 Team
+1,Australian Grand Prix,2026-03-08,15,21,0,Lapped,SAI,Williams
+1,Australian Grand Prix,2026-03-08,16,18,0,Lapped,PER,Cadillac F1 Team
+1,Australian Grand Prix,2026-03-08,17,22,0,Lapped,STR,Aston Martin
+1,Australian Grand Prix,2026-03-08,18,17,0,Retired,ALO,Aston Martin
+1,Australian Grand Prix,2026-03-08,19,19,0,Retired,BOT,Cadillac F1 Team
+1,Australian Grand Prix,2026-03-08,20,3,0,Retired,HAD,Red Bull
+1,Australian Grand Prix,2026-03-08,21,5,0,Did not start,PIA,McLaren
+1,Australian Grand Prix,2026-03-08,22,11,0,Did not start,HUL,Audi
+2,Chinese Grand Prix,2026-03-15,1,1,25,Finished,ANT,Mercedes
+2,Chinese Grand Prix,2026-03-15,2,2,18,Finished,RUS,Mercedes
+2,Chinese Grand Prix,2026-03-15,3,3,15,Finished,HAM,Ferrari
+2,Chinese Grand Prix,2026-03-15,4,4,12,Finished,LEC,Ferrari
+2,Chinese Grand Prix,2026-03-15,5,10,10,Finished,BEA,Haas F1 Team
+2,Chinese Grand Prix,2026-03-15,6,7,8,Finished,GAS,Alpine F1 Team
+2,Chinese Grand Prix,2026-03-15,7,14,6,Finished,LAW,RB F1 Team
+2,Chinese Grand Prix,2026-03-15,8,9,4,Finished,HAD,Red Bull
+2,Chinese Grand Prix,2026-03-15,9,17,2,Lapped,SAI,Williams
+2,Chinese Grand Prix,2026-03-15,10,12,1,Lapped,COL,Alpine F1 Team
+2,Chinese Grand Prix,2026-03-15,11,11,0,Lapped,HUL,Audi
+2,Chinese Grand Prix,2026-03-15,12,15,0,Lapped,LIN,RB F1 Team
+2,Chinese Grand Prix,2026-03-15,13,19,0,Lapped,BOT,Cadillac F1 Team
+2,Chinese Grand Prix,2026-03-15,14,13,0,Lapped,OCO,Haas F1 Team
+2,Chinese Grand Prix,2026-03-15,15,21,0,Lapped,PER,Cadillac F1 Team
+2,Chinese Grand Prix,2026-03-15,16,8,0,Retired,VER,Red Bull
+2,Chinese Grand Prix,2026-03-15,17,18,0,Retired,ALO,Aston Martin
+2,Chinese Grand Prix,2026-03-15,18,20,0,Retired,STR,Aston Martin
+2,Chinese Grand Prix,2026-03-15,19,5,0,Did not start,PIA,McLaren
+2,Chinese Grand Prix,2026-03-15,20,6,0,Did not start,NOR,McLaren
+2,Chinese Grand Prix,2026-03-15,21,16,0,Did not start,BOR,Audi
+2,Chinese Grand Prix,2026-03-15,22,22,0,Did not start,ALB,Williams
+3,Japanese Grand Prix,2026-03-29,1,1,25,Finished,ANT,Mercedes
+3,Japanese Grand Prix,2026-03-29,2,3,18,Finished,PIA,McLaren
+3,Japanese Grand Prix,2026-03-29,3,4,15,Finished,LEC,Ferrari
+3,Japanese Grand Prix,2026-03-29,4,2,12,Finished,RUS,Mercedes
+3,Japanese Grand Prix,2026-03-29,5,5,10,Finished,NOR,McLaren
+3,Japanese Grand Prix,2026-03-29,6,6,8,Finished,HAM,Ferrari
+3,Japanese Grand Prix,2026-03-29,7,7,6,Finished,GAS,Alpine F1 Team
+3,Japanese Grand Prix,2026-03-29,8,11,4,Finished,VER,Red Bull
+3,Japanese Grand Prix,2026-03-29,9,14,2,Finished,LAW,RB F1 Team
+3,Japanese Grand Prix,2026-03-29,10,12,1,Finished,OCO,Haas F1 Team
+3,Japanese Grand Prix,2026-03-29,11,13,0,Finished,HUL,Audi
+3,Japanese Grand Prix,2026-03-29,12,8,0,Finished,HAD,Red Bull
+3,Japanese Grand Prix,2026-03-29,13,9,0,Finished,BOR,Audi
+3,Japanese Grand Prix,2026-03-29,14,10,0,Finished,LIN,RB F1 Team
+3,Japanese Grand Prix,2026-03-29,15,16,0,Finished,SAI,Williams
+3,Japanese Grand Prix,2026-03-29,16,15,0,Finished,COL,Alpine F1 Team
+3,Japanese Grand Prix,2026-03-29,17,19,0,Finished,PER,Cadillac F1 Team
+3,Japanese Grand Prix,2026-03-29,18,21,0,Lapped,ALO,Aston Martin
+3,Japanese Grand Prix,2026-03-29,19,20,0,Lapped,BOT,Cadillac F1 Team
+3,Japanese Grand Prix,2026-03-29,20,17,0,Lapped,ALB,Williams
+3,Japanese Grand Prix,2026-03-29,21,22,0,Retired,STR,Aston Martin
+3,Japanese Grand Prix,2026-03-29,22,18,0,Retired,BEA,Haas F1 Team
+4,Miami Grand Prix,2026-05-03,1,1,25,Finished,ANT,Mercedes
+4,Miami Grand Prix,2026-05-03,2,4,18,Finished,NOR,McLaren
+4,Miami Grand Prix,2026-05-03,3,7,15,Finished,PIA,McLaren
+4,Miami Grand Prix,2026-05-03,4,5,12,Finished,RUS,Mercedes
+4,Miami Grand Prix,2026-05-03,5,2,10,Finished,VER,Red Bull
+4,Miami Grand Prix,2026-05-03,6,6,8,Finished,HAM,Ferrari
+4,Miami Grand Prix,2026-05-03,7,8,6,Finished,COL,Alpine F1 Team
+4,Miami Grand Prix,2026-05-03,8,3,4,Finished,LEC,Ferrari
+4,Miami Grand Prix,2026-05-03,9,13,2,Finished,SAI,Williams
+4,Miami Grand Prix,2026-05-03,10,15,1,Finished,ALB,Williams
+4,Miami Grand Prix,2026-05-03,11,12,0,Lapped,BEA,Haas F1 Team
+4,Miami Grand Prix,2026-05-03,12,21,0,Lapped,BOR,Audi
+4,Miami Grand Prix,2026-05-03,13,14,0,Lapped,OCO,Haas F1 Team
+4,Miami Grand Prix,2026-05-03,14,16,0,Lapped,LIN,RB F1 Team
+4,Miami Grand Prix,2026-05-03,15,17,0,Lapped,ALO,Aston Martin
+4,Miami Grand Prix,2026-05-03,16,20,0,Lapped,PER,Cadillac F1 Team
+4,Miami Grand Prix,2026-05-03,17,18,0,Lapped,STR,Aston Martin
+4,Miami Grand Prix,2026-05-03,18,19,0,Lapped,BOT,Cadillac F1 Team
+4,Miami Grand Prix,2026-05-03,19,10,0,Retired,HUL,Audi
+4,Miami Grand Prix,2026-05-03,20,11,0,Retired,LAW,RB F1 Team
+4,Miami Grand Prix,2026-05-03,21,9,0,Retired,GAS,Alpine F1 Team
+4,Miami Grand Prix,2026-05-03,22,22,0,Retired,HAD,Red Bull
+5,Canadian Grand Prix,2026-05-24,1,2,25,Finished,ANT,Mercedes
+5,Canadian Grand Prix,2026-05-24,2,5,18,Finished,HAM,Ferrari
+5,Canadian Grand Prix,2026-05-24,3,6,15,Finished,VER,Red Bull
+5,Canadian Grand Prix,2026-05-24,4,8,12,Finished,LEC,Ferrari
+5,Canadian Grand Prix,2026-05-24,5,7,10,Lapped,HAD,Red Bull
+5,Canadian Grand Prix,2026-05-24,6,10,8,Lapped,COL,Alpine F1 Team
+5,Canadian Grand Prix,2026-05-24,7,12,6,Lapped,LAW,RB F1 Team
+5,Canadian Grand Prix,2026-05-24,8,14,4,Lapped,GAS,Alpine F1 Team
+5,Canadian Grand Prix,2026-05-24,9,15,2,Lapped,SAI,Williams
+5,Canadian Grand Prix,2026-05-24,10,16,1,Lapped,BEA,Haas F1 Team
+5,Canadian Grand Prix,2026-05-24,11,4,0,Lapped,PIA,McLaren
+5,Canadian Grand Prix,2026-05-24,12,11,0,Lapped,HUL,Audi
