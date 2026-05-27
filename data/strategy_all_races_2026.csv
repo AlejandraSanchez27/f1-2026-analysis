@@ -1,0 +1,44 @@
+Driver,LapNumber,Compound,TyreLife,PitInTime,Team,Race,Round
+LEC,25.0,MEDIUM,25.0,0 days 01:39:23.741000,Ferrari,Australia,1
+HAM,28.0,MEDIUM,28.0,0 days 01:43:39.308000,Ferrari,Australia,1
+RUS,12.0,MEDIUM,12.0,0 days 01:19:51.153000,Mercedes,Australia,1
+ANT,12.0,MEDIUM,12.0,0 days 01:19:53.658000,Mercedes,Australia,1
+NOR,11.0,MEDIUM,11.0,0 days 01:18:15.593000,McLaren,Australia,1
+NOR,34.0,HARD,23.0,0 days 01:52:42.584000,McLaren,Australia,1
+VER,18.0,HARD,18.0,0 days 01:29:23.209000,Red Bull,Australia,1
+VER,41.0,MEDIUM,23.0,0 days 02:02:31.678000,Red Bull,Australia,1
+LEC,10.0,MEDIUM,10.0,0 days 01:13:01.547000,Ferrari,China,2
+HAM,10.0,MEDIUM,10.0,0 days 01:12:58.531000,Ferrari,China,2
+RUS,10.0,MEDIUM,10.0,0 days 01:12:57.297000,Mercedes,China,2
+ANT,10.0,MEDIUM,10.0,0 days 01:12:49.922000,Mercedes,China,2
+VER,9.0,SOFT,12.0,0 days 01:11:32.287000,Red Bull,China,2
+VER,45.0,HARD,36.0,0 days 02:13:48.930000,Red Bull,China,2
+HAD,1.0,SOFT,4.0,0 days 00:58:26.239000,Red Bull,China,2
+HAD,10.0,HARD,9.0,0 days 01:14:05.173000,Red Bull,China,2
+LEC,17.0,MEDIUM,17.0,0 days 01:30:48.100000,Ferrari,Japan,3
+HAM,22.0,MEDIUM,22.0,0 days 01:39:04.896000,Ferrari,Japan,3
+RUS,21.0,MEDIUM,21.0,0 days 01:37:02.807000,Mercedes,Japan,3
+ANT,22.0,MEDIUM,22.0,0 days 01:38:55.866000,Mercedes,Japan,3
+NOR,16.0,MEDIUM,16.0,0 days 01:29:14.566000,McLaren,Japan,3
+PIA,18.0,MEDIUM,18.0,0 days 01:32:17.551000,McLaren,Japan,3
+VER,22.0,MEDIUM,22.0,0 days 01:39:24.380000,Red Bull,Japan,3
+HAD,19.0,MEDIUM,19.0,0 days 01:34:28.049000,Red Bull,Japan,3
+LEC,21.0,MEDIUM,21.0,0 days 01:34:58.981000,Ferrari,USA,4
+HAM,27.0,MEDIUM,27.0,0 days 01:44:29.200000,Ferrari,USA,4
+RUS,20.0,MEDIUM,20.0,0 days 01:33:28.001000,Mercedes,USA,4
+ANT,26.0,MEDIUM,26.0,0 days 01:42:38.637000,Mercedes,USA,4
+NOR,27.0,MEDIUM,27.0,0 days 01:44:09.959000,McLaren,USA,4
+PIA,28.0,MEDIUM,28.0,0 days 01:45:57.473000,McLaren,USA,4
+VER,6.0,MEDIUM,6.0,0 days 01:07:36.745000,Red Bull,USA,4
+LEC,31.0,SOFT,35.0,0 days 01:42:55.080000,Ferrari,Canada,5
+HAM,31.0,SOFT,34.0,0 days 01:42:53.424000,Ferrari,Canada,5
+ANT,31.0,SOFT,35.0,0 days 01:42:36.253000,Mercedes,Canada,5
+NOR,2.0,INTERMEDIATE,2.0,0 days 01:05:14.626000,McLaren,Canada,5
+NOR,15.0,MEDIUM,13.0,0 days 01:22:31.004000,McLaren,Canada,5
+PIA,1.0,INTERMEDIATE,1.0,0 days 01:03:55.522000,McLaren,Canada,5
+PIA,12.0,MEDIUM,11.0,0 days 01:18:45.068000,McLaren,Canada,5
+PIA,51.0,MEDIUM,43.0,0 days 02:10:58.956000,McLaren,Canada,5
+VER,31.0,SOFT,36.0,0 days 01:42:42.217000,Red Bull,Canada,5
+HAD,31.0,SOFT,35.0,0 days 01:42:57.689000,Red Bull,Canada,5
+HAD,52.0,MEDIUM,21.0,0 days 02:10:34.905000,Red Bull,Canada,5
+HAD,62.0,SOFT,14.0,0 days 02:23:59.361000,Red Bull,Canada,5

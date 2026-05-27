@@ -1,1 +1,5 @@
-__pycache__/ 
+cache/
+data/cache/
+__pycache__/
+*.sqlite
+*.xlsx
