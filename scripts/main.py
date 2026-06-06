@@ -49,7 +49,7 @@ def main():
     print(all_results_df)
 
     # Guarda en CSV (TODOS LOS RESULTADOS)
-    all_results_df.to_csv("../data/all_results_2026.csv", index=False)
+    all_results_df.to_excel("../excel/all_results_2026.xlsx", index=False)
     print("Archivo guardado correctamente")
 
     # RESULRADOS SPRINTS
@@ -59,7 +59,7 @@ def main():
     print("\n===== RESULTADOS SPRINTS =====")
     print(sprints_results_df)
 
-    sprints_results_df.to_csv("../data/sprints_results_2026.csv", index=False)
+    sprints_results_df.to_excel("../excel/sprints_results_2026.xlsx", index=False)
     print("Archivo guardado correctamente")
 
 

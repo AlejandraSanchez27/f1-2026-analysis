@@ -67,15 +67,28 @@ def get_pit_strategy(session, round_number, race_name, drivers_teams):
 
     for driver, team in drivers_teams.items():
         driver_laps = laps.pick_drivers([driver])
-        pits = driver_laps[driver_laps["PitInTime"].notna()][
+
+        pits_in = driver_laps[driver_laps["PitInTime"].notna()][
             ["Driver", "LapNumber", "Compound", "TyreLife", "PitInTime"]
         ].copy()
+
+        pits_out = driver_laps[driver_laps["PitOutTime"].notna()][
+            ["LapNumber", "PitOutTime"]
+        ].copy()
+        pits_out["LapNumber"] = pits_out["LapNumber"] - 1
+
+        pits = pits_in.merge(pits_out, on="LapNumber", how="left")
         pits["Team"] = team
         pits["Race"] = race_name
         pits["Round"] = round_number
         pit_data.append(pits)
 
-    return pd.concat(pit_data, ignore_index=True)
+    df = pd.concat(pit_data, ignore_index=True)
+    df["PitInTime"] = df["PitInTime"].dt.total_seconds()
+    df["PitOutTime"] = df["PitOutTime"].dt.total_seconds()
+    df["PitDuration"] = df["PitOutTime"] - df["PitInTime"]
+
+    return df
 
 
 df = get_pit_strategy(session, 1, "Australia", drivers_teams)
@@ -95,9 +108,7 @@ print(f"Total filas: {len(df_all)}")
 """
 
 df_all = pd.concat([df, df1, df2, df3, df4], ignore_index=True)
-
 df_all.to_excel("../excel/strategy_all_races_2026.xlsx", index=False)
-
 print(f"Total filas: {len(df_all)}")
 
 

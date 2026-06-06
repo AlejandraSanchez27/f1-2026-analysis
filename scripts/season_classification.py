@@ -19,7 +19,7 @@ championship.index = championship.index + 1
 championship.index.name = "position"
 
 print(championship)
-championship.to_csv("../data/championship_2026.csv")
+championship.to_excel("../excel/championship_2026.xlsx", index=False)
 
 constructors = df_all.groupby("constructor")["points"]\
     .sum()\
@@ -28,6 +28,6 @@ constructors = df_all.groupby("constructor")["points"]\
     .reset_index(drop=True)
 
 print(constructors)
-constructors.to_csv("../data/constructors_2026.csv")
+constructors.to_excel("../excel/constructors_2026.xlsx", index=False)
 
 
