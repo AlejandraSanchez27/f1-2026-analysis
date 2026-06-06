@@ -88,7 +88,49 @@ df3 = get_pit_strategy(session3, 4, "USA", drivers_teams)
 print(df3)
 df4 = get_pit_strategy(session4, 5, "Canada", drivers_teams)
 print(df4)
-
+"""
 df_all = pd.concat([df, df1, df2, df3, df4], ignore_index=True)
 df_all.to_csv("../data/strategy_all_races_2026.csv", index=False)
 print(f"Total filas: {len(df_all)}")
+"""
+
+df_all = pd.concat([df, df1, df2, df3, df4], ignore_index=True)
+
+df_all.to_excel("../excel/strategy_all_races_2026.xlsx", index=False)
+
+print(f"Total filas: {len(df_all)}")
+
+
+def get_lap_times(session, round_number, race_name, drivers_teams):
+    laps = session.laps
+    lap_data = []
+
+    for driver, team in drivers_teams.items():
+        driver_laps = laps.pick_drivers([driver])[
+            ["Driver", "LapNumber", "LapTime", "Compound", "TyreLife", "IsAccurate"]
+        ].copy()
+        driver_laps["Team"] = team
+        driver_laps["Race"] = race_name
+        driver_laps["Round"] = round_number
+        lap_data.append(driver_laps)
+
+    return pd.concat(lap_data, ignore_index=True)
+
+df = get_lap_times(session, 1, "Australia", drivers_teams)
+print(df)
+df1 = get_lap_times(session1, 2, "China", drivers_teams)
+print(df1)
+df2 = get_lap_times(session2, 3, "Japan", drivers_teams)
+print(df2)
+df3 = get_lap_times(session3, 4, "USA", drivers_teams)
+print(df3)
+df4 = get_lap_times(session4, 5, "Canada", drivers_teams)
+print(df4)
+
+
+df_all_lap_times = pd.concat([df, df1, df2, df3, df4], ignore_index=True)
+df_all_lap_times["LapTimeSeconds"] = df_all_lap_times["LapTime"].dt.total_seconds()
+df_clean = df_all_lap_times[df_all_lap_times["IsAccurate"] == True].copy()
+df_clean = df_clean.drop(columns=["LapTime"])
+df_clean.to_excel("../excel/lap_times_all_2026.xlsx", index=False)
+print(f"Total filas: {len(df_clean)}")
