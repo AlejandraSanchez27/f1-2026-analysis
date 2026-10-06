@@ -1,10 +1,10 @@
 """
-Proyecto: Explorador del calendario de Fórmula 1 2026
+Proyecto: Explorador del datos de Fórmula 1 temporada2026
 Autor: Johana Alejandra Sánchez Vega
 
 Descripción:
-Este script consume la API Ergast/Jolpica de Fórmula 1 para
-obtener el calendario oficial de la temporada 2026.
+Este script consume la API Jolpica de Fórmula 1 para
+obtener datos de la temporada 2026.
 Posteriormente organiza la información en un DataFrame
 para realizar análisis y filtros básicos con pandas.
 """
@@ -13,7 +13,7 @@ para realizar análisis y filtros básicos con pandas.
 import requests
 import pandas as pd
 
-# URL base de la API de Fórmula 1 (Ergast)
+# URL base de la API de Fórmula 1 jolpica-F1
 BASE_URL = "https://api.jolpi.ca/ergast/f1"
 SEASON = 2026 # Temporada que se va a consultar
 # Funcion->Data Escuderias
