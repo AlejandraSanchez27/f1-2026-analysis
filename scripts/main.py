@@ -48,7 +48,7 @@ def main():
     print("\n===== TODOS LOS RESULTADOS =====")
     print(all_results_df)
 
-    # Guarda en CSV (TODOS LOS RESULTADOS)
+    # Guarda en excel (TODOS LOS RESULTADOS)
     all_results_df.to_excel("../excel/all_results_2026.xlsx", index=False)
     print("Archivo guardado correctamente")
 
